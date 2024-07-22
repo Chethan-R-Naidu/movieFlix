@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>All Movies</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background-image:url("/images/GIF3.gif");
+    background-size: contain;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    h2 {
+        color: #e50914;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    .movie-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        width: 100%;
+        max-width: 1200px;
+        animation: fadeIn 2s ease-in-out 0.5s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    .movie-item {
+        background-color: #333;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        animation: fadeIn 2s ease-in-out 1s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+    .movie-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .movie-item h3 {
+        margin-bottom: 10px;
+    }
+
+    .movie-item iframe {
+        width: 100%;
+        height: 200px;
+        border-radius: 8px;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+</head>
+<body>
+    <h2>All Movies</h2>
+    <div class="movie-grid">
+        <div th:each="movie : ${movie}" class="movie-item">
+            <h3 th:text="${movie.movieName}">Movie Name</h3>
+            <div th:utext="${movie.movieLink}"></div>
+        </div>
+    </div>
+</body>
+</html>

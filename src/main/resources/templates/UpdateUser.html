@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Update User</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image:url("/images/GIF3.gif");
+    background-size: contain;
+    color: #e5e5e5;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #e50914;
+    text-align: center;
+    animation: fadeInDown 1s;
+}
+
+.form-container {
+    background-color: #333;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 350px;
+    animation: fadeInUp 1s;
+}
+
+.form-container label {
+    display: block;
+    margin-top: 0.3em;
+    font-weight: bold;
+}
+.gender-items label{
+  display:inline;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="tel"],
+.form-container input[type="password"],
+.form-container textarea {
+    width: calc(100% - 20px);
+    padding: 5px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #222;
+    color: #fff;
+}
+
+.form-container input[type="radio"] {
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+label{
+   font-size:13px;
+   color:#e50914;
+}
+.form-container textarea {
+    height: 20px;
+}
+
+.form-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0.5em;
+    border: none;
+    border-radius: 4px;
+    background-color: #e50914;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #d40813;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 1.5em;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="email"],
+    .form-container input[type="tel"],
+    .form-container input[type="password"],
+    .form-container textarea {
+        padding: 8px;
+    }
+
+    .form-container input[type="submit"] {
+        padding: 8px;
+    }
+}
+</style>
+</head>
+<body>
+<h2>Update User Profile</h2>
+<form action="updateUser" method="post" class="form-container">
+    <input type="hidden" name="_method" value="put">
+    
+    
+    <input type="text"  name="name" placeholder="Please enter Name">
+<!-- 
+    <input type="email" name="email" placeholder="Please enter your email"> -->
+
+   
+    <input type="tel"  name="phoneNo" placeholder="Please enter your number">
+
+  
+    <input type="password"  name="password" placeholder="Please enter your password">
+
+    
+    <div class="gender-items">
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="Other"> Others</label>
+    </div>
+
+    <textarea id="address" name="address" placeholder="Please enter your address"></textarea>
+
+    <input type="submit" value="Update">
+</form>
+</body>
+</html>

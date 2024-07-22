@@ -1,0 +1,109 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-image:url("/images/GIF3.gif");
+        background-size: contain;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    h2 {
+        color: #e50914;
+        font-size: 3rem;
+        margin: 0 0 20px;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    form {
+        background-color: #333;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        animation: fadeIn 2s ease-in-out 0.5s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+        width: 100%;
+        max-width: 400px;
+        height:25vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #222;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    button[type="submit"] {
+        background-color: #e50914;
+        border: none;
+        color: white;
+        padding: 15px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1rem;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        width: 100%;
+        max-width: 200px;
+        align-self: center;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #f40612;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 768px) {
+    
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        button[type="submit"] {
+            padding: 12px 24px;
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h2 {
+            font-size: 2rem;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            font-size: 0.8rem;
+        }
+    }

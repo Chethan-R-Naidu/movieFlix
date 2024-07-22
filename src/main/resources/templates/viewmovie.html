@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>All Movies</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background-image:url("/images/GIF3.gif");
+    background-size: contain;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    h2 {
+        color: #e50914;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        background-color: #222;
+        transition: background-color 0.3s;
+    }
+
+    th {
+        background-color: #333;
+        color: #fff;
+    }
+
+    tr:hover {
+        background-color: #333;
+    }
+
+    .button-container {
+        text-align: center;
+        margin-top: 20px;
+        animation: fadeIn 2s ease-in-out 1s;
+    }
+
+    .button-container input[type="submit"] {
+        background-color: #e50914;
+        border: none;
+        color: white;
+        padding: 15px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1rem;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+    .button-container input[type="submit"]:hover {
+        background-color: #f40612;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        .button-container input[type="submit"] {
+            padding: 12px 24px;
+            font-size: 0.9rem;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>All Movies</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Link</th>
+                <th>Genre</th>
+                <th>Cast</th>
+                <th>Director</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="movie : ${movie}">
+                <td th:text="${movie.id}"></td>
+                <td th:text="${movie.movieName}"></td>
+                <td th:utext="${movie.movieLink}"></td>
+                <td th:text="${movie.movieGenre}"></td>
+                <td th:text="${movie.movieCast}"></td>
+                <td th:text="${movie.movieDirector}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="button-container">
+        <form action="Admin Home">
+            <input type="submit" value="Admin Home">
+        </form>
+    </div>
+</div>
+</body>
+</html>

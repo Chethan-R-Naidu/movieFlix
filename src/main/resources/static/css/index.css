@@ -1,0 +1,100 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.flex-container {
+	font-family: 'Roboto', sans-serif;
+	background-image: url("/images/gif6.gif");
+	background-size: cover;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+	padding: 20px;
+}
+
+.button-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 1.9rem;
+	width: 50%;
+}
+
+.index-h1 {
+	color: #e50914;
+	font-size: 10rem;
+	max-width: 50%;
+	padding-top: 2rem;
+	animation: fadeIn 2s ease-in-out;
+
+
+}
+.anchor {
+	margin: 10px 0;
+	width: 100%;
+	max-width: 7rem;
+	justify-content: center;
+	max-width: 10rem;
+	display: flex;
+	padding: 2rem;
+	align-items: center;
+	background-color: #e50914;
+	text-decoration: none;
+	border-radius: 0.5em;
+}
+
+input[type="submit"] {
+	background-color: transparent;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1.5rem;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	animation: fadeIn 2s ease-in-out 0.5s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	max-width: 100%;
+}
+
+.anchor:hover {
+	background-color: #f40612;
+}
+
+
+
+@keyframes fadeIn {from { opacity:0;
+	transform: translateY(20px);
+}
+
+to {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+}@media ( max-width : 768px) {
+	.index-h2 {
+		font-size: 2.5rem;
+	}
+	input[type="submit"] {
+		padding: 12px 24px;
+		font-size: 0.9rem;
+	}
+}
+
+@media ( max-width : 480px) {
+	.index-h2 {
+		font-size: 2rem;
+		margin: 0 0 20px;
+	}
+	input[type="submit"] {
+		padding: 10px 20px;
+		font-size: 0.8rem;
+	}
+}

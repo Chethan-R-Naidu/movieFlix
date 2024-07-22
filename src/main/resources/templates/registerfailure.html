@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+<link rel="stylesheet" type="text/css" href="/css/register.css">
+</head>
+<body>
+<div class="flex-container">
+    <h2>Registration failed, Try again</h2>
+    <form action="Register" method="post" class="form-container">
+<!-- sends the total information to UserController class -->
+        
+        <input type="text" name="name" placeholder="Enter your name">
+        
+      
+        <input type="email" name="email" placeholder="Enter your email">
+        
+        
+        <input type="tel" name="phoneNo" placeholder="Enter your phone.no">
+        
+        
+        <input type="password" name="password" placeholder="Enter password">
+        
+        
+       <div class="gender-items">
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="Other"> Others</label>
+    </div>
+            <textarea name="address" placeholder="Enter your address"></textarea>
+        
+        <input type="submit" value="Register">
+    </form>
+    </div>
+ </body>
+</html>

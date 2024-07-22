@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome to MovieFlix</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background-image:url("/images/GIF3.gif");
+    background-size: contain;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        min-height: 92vh;
+        justify-content: center;
+    }
+
+    h2 {
+        color: #e50914;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    .description p {
+        max-width: 600px;
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+        animation: fadeIn 2s ease-in-out 0.5s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+.grid-container{
+display:grid;
+grid-template-columns:repeat(3, 1fr);
+column-gap:1rem;
+}
+    a {
+        text-decoration: none;
+    }
+
+    a input[type="submit"] {
+        background-color: #e50914;
+        border: none;
+        width:10rem;
+        color: white;
+        padding: 15px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1rem;
+        margin-top: 5px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s, transform 0.3s;
+        animation: fadeIn 2s ease-in-out 1s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+    a input[type="submit"]:hover {
+        background-color: #f40612;
+        transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+</head>
+<body>
+    <h2>Welcome to MovieFlix</h2>
+    <div class="description">
+        <p>
+       MovieFlix is the one place to watch your favorite <span id="element"></span>
+        </p>
+    </div>
+
+<div class="grid-container">
+    <a href="exploremovies"><input type="submit" value="Explore Movies"></a>
+   
+    <a href="map-updateuser"><input type="submit" value="Update Profile"></a>
+    
+    <a href="logout"><input type="submit" value="Logout"></a>
+    </div>
+      <!-- Element to contain animated typing -->
+  
+
+  <!-- Load library from the CDN -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['short films','blockbuster Movies','Web Series'],
+      typeSpeed: 70,
+    });
+  </script>
+
+</body>
+</html>

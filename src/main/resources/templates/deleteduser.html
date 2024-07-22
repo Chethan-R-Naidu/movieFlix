@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Deleted User</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background-image:url("/images/GIF3.gif");
+    background-size: contain;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    .container {
+        text-align: center;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    .button-container {
+        margin-top: 20px;
+        animation: fadeIn 2s ease-in-out 0.5s;
+    }
+
+    .button-container input[type="submit"] {
+        background-color: #e50914;
+        border: none;
+        color: white;
+        padding: 15px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1rem;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .button-container input[type="submit"]:hover {
+        background-color: #f40612;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .button-container input[type="submit"] {
+            padding: 12px 24px;
+            font-size: 0.9rem;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Deleted User</h2>
+    <form action="Admin Home" class="button-container">
+        <input type="submit" value="Admin Home">
+    </form>
+</div>
+</body>
+</html>

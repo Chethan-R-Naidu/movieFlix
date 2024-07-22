@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin Dashboard</title>
+<link
+	href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+	rel="stylesheet">
+<style>
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	background-image:url("/images/GIF3.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+
+h2 {
+	color: #e50914;
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+	animation: fadeIn 2s ease-in-out;
+}
+
+form {
+	margin: 10px 0;
+	width: 100%;
+	max-width: 300px;
+	display: flex;
+	justify-content: center;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns:1fr 1fr 1fr;
+	column-gap:3rem;
+}
+
+input[type="submit"] {
+	background-color: #e50914;
+	border: none;
+	color: white;
+	padding: 15px 30px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1rem;
+	cursor: pointer;
+	border-radius: 4px;
+	transition: background-color 0.3s;
+	animation: fadeIn 2s ease-in-out 0.5s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	width: 100%;
+	max-width: 200px;
+}
+
+input[type="submit"]:hover {
+	background-color: #f40612;
+}
+
+@keyframes fadeIn {from { opacity:0;
+	transform: translateY(20px);
+}
+
+to {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+}
+@media ( max-width : 768px) {
+	h2 {
+		font-size: 2rem;
+	}
+	input[type="submit"] {
+		padding: 12px 24px;
+		font-size: 0.9rem;
+	}
+}
+
+@media ( max-width : 480px) {
+	h2 {
+		font-size: 1.5rem;
+	}
+	input[type="submit"] {
+		padding: 10px 20px;
+		font-size: 0.8rem;
+	}
+}
+</style>
+</head>
+<body>
+	<h2>Hey Admin, Login is successful</h2>
+	<div class="grid-container">
+		<form action="map-view">
+			<input type="submit" value="View Users">
+		</form>
+		<form action="map-updateuser">
+			<input type="submit" value="Update User">
+		</form>
+		<form action="map-deleteuser">
+			<input type="submit" value="Delete User">
+		</form>
+		<form action="map-addmovie">
+			<input type="submit" value="Add Movie">
+		</form>
+		<form action="viewmovies">
+			<input type="submit" value="View Movies">
+		</form>
+		<form action="logout">
+			<input type="submit" value="Logout">
+		</form>
+	</div>
+</body>
+</html>

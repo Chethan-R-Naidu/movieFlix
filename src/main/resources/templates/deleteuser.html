@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Delete User</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background-image:url("/images/GIF3.gif");
+    background-size: contain;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    .container {
+        text-align: center;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    .form-container {
+        background-color: #333;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        animation: fadeIn 2s ease-in-out;
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .form-container label {
+        margin: 10px 0 5px;
+    }
+
+    .form-container input[type="email"] {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 4px;
+        box-sizing: border-box;
+        color: #000;
+    }
+
+    .form-container input[type="submit"] {
+        background-color: #e50914;
+        border: none;
+        color: white;
+        padding: 15px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1rem;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        width: 100%;
+        max-width: 200px;
+        align-self: center;
+    }
+
+    .form-container input[type="submit"]:hover {
+        background-color: #f40612;
+    }
+
+    .admin-home-container {
+        margin-top: 20px;
+        
+        animation: fadeIn 2s ease-in-out 0.5s;
+    }
+
+    .admin-home-container input[type="submit"] {
+        background-color: #e50914;
+        border: none;
+        color: white;
+        padding: 15px 30px;
+        text-align: center;
+        text-decoration: none;
+        position:relative;
+        left:1.3rem;
+        display: inline-block;
+        font-size: 1rem;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        width: 100%;
+        max-width: 200px;
+        align-self: center;
+    }
+
+    .admin-home-container input[type="submit"]:hover {
+        background-color: #f40612;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .form-container input[type="submit"],
+        .admin-home-container input[type="submit"] {
+            padding: 12px 24px;
+            font-size: 0.9rem;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <form action="delete_user" method="post" class="form-container">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <input type="submit" value="Delete User">
+    </form>
+    <form action="Admin Home" class="admin-home-container">
+        <input type="submit" value="Admin Home">
+    </form>
+</div>
+</body>
+</html>
